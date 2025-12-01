@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Zoom Auto-Join",
+  "version": "1.0",
+  "description": "Automatically clicks Join button in Zoom meetings",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://zoom.us/wc/join/*"],
+      "js": ["zoom-auto-join.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
